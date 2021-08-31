@@ -1,0 +1,32 @@
+body{
+    background-image: url("https://img5.goodfon.com/wallpaper/nbig/5/78/les-zhivotnye-oleni-derevia-gory-gora-minimalizm.jpg") ;
+    background-size:cover;
+}
+
+.showWeather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.text{
+    color: white;
+
+}
+
+.weatherIcon{
+    width:140px;
+    height: auto;
+}
+
+
+
+/* .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
