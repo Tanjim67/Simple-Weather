@@ -36,7 +36,7 @@ const showWeather = (weather) => {
     div.innerHTML = `            
         <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="" >
         <h1 class="text">${weather.name}</h1>
-        <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(2)}</span>&deg;C</h3>
+        <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(0)}</span>&deg;C</h3>
         <h1 class="lead text">${weatherKind}</h1>
         `;
 
