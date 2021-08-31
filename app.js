@@ -31,47 +31,17 @@ const showWeather = (weather) => {
     const div = document.createElement('div');
     div.classList.add('showWeather')
     const weatherKind = weather.weather[0].main;
-    if (weatherKind == 'Haze') {
-        div.innerHTML = `            
-        <img src="images/Haze.png" alt="" class="weatherIcon" >
+    const weatherIcon = weather.weather[0].icon;
+
+    div.innerHTML = `            
+        <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="" >
         <h1 class="text">${weather.name}</h1>
         <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(2)}</span>&deg;C</h3>
         <h1 class="lead text">${weatherKind}</h1>
         `;
 
-        weatherContainer.appendChild(div);
+    weatherContainer.appendChild(div);
 
-    } else if (weatherKind == 'Clouds') {
-        div.innerHTML = `            
-        <img src="images/Clouds.jpg" alt="" class="weatherIcon" >
-        <h1 class="text">${weather.name}</h1>
-        <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(2)}</span>&deg;C</h3>
-        <h1 class="lead text">${weatherKind}</h1>
-        `;
-
-        weatherContainer.appendChild(div);
-
-    } else if (weatherKind == 'Rain') {
-        div.innerHTML = `            
-        <img src="images/Rains.png" alt="" class="weatherIcon" >
-        <h1 class="text">${weather.name}</h1>
-        <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(2)}</span>&deg;C</h3>
-        <h1 class="lead text">${weatherKind}</h1>
-        `;
-
-        weatherContainer.appendChild(div);
-
-    }
-    else {
-        div.innerHTML = `            
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" class="weatherIcon">
-        <h1 class="text">${weather.name}</h1>
-        <h3 class="text"><span>${(weather.main.temp - 273.15).toFixed(2)}</span>&deg;C</h3>
-        <h1 class="lead text">${weatherKind}</h1>
-        `;
-
-        weatherContainer.appendChild(div);
-    }
 
 
 }
